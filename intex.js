@@ -1,8 +1,10 @@
-let user= ["Sundar","Raj ","Rahul"]
-console.log(user[1])
+// Concatenate
+var name = "Sundaramoorthy";
+var secound = " S";
+var output = name + secound;
 
-for(var x=0;x100;x=+5)
-{
-    console.log(x)
-}
+console.log(output); // Sundaramoorthy S
 
+// Template String
+var user = `${name} hey welcome to my site`;
+console.log(user); // Sundaramoorthy hey welcome to my site
