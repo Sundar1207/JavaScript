@@ -1,13 +1,13 @@
-// Function 
-var age = 9
-function Age(){
-    if (18<age)
-    {
-        console.log("You are eligiple")
+// var - function scope
+
+function names() {
+    if (true) {   // lowercase true, condition inside ()
+        var x = 10;   // declared with var inside block
+        console.log("Inside if: ", x);
     }
-    else
-    {
-        console.log("Not ok ")
-    }
+
+    // var is function-scoped → still accessible here
+    console.log("Outside if: ", x);
 }
-Age()
+
+names();
