@@ -1,32 +1,16 @@
-//  Spread Operatore and Rest Operatore
-// spread operatoe - Used to expand/unpack elements of an array, string, or object into individual elements.
-// Rest Operatore - Used to collect/pack multiple arguments into a single array or object.
+//  Arrayb methods 
+let arr=[100,200,300,400]
 
-let name= "Sundar";
-let name1="Moorthy"
-let fullname=[...name," ",...name1]
-console.log(fullname);
+arr.pop()    // Pop()- Remove the last element in array , No arrgument passing 
+arr.push(500,600)  //push() - insert the value at last index in array , can feat argument 
+console.log(arr)
 
-let arr=[1,2,3,4,5]
-let arr1=[...arr,...name]
+arr.unshift(0); //unshift can inset the value at index 0 or first elements 
+console.log(arr) 
+arr.shift();   //shift only caling function no arguments , remove the value  at index 0 or first elements
+console.log(arr)
 
-console.log(arr1)
-
-let Emp = {
-    Name :fullname,
-    Reg:192324228,
-    Dep:"AI-DS"
-}
-
-let id={...Emp, Phone : 9783276324};
-console.log(id)
-// Rest Operatore 
-
-function SumOf(arr2){
-
-    let sum=arr2.reduce((a,b)=>a+b,0)
-    console.log(sum)
-}
-
-let arr2 =[1,2,3,4,5,6]
-SumOf(arr2)
+arr.splice(2,1)  // splice(x,y,z)- x: start position , y - no of deleting elements , insert elemnts 
+console.log(arr);
+arr.splice(2, 0, [300,400])
+console.log(arr);
