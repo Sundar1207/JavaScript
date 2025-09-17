@@ -1,8 +1,5 @@
-let arr = [1, 2, 3];
+let arr = [3, 1, 2];
 
-arr.forEach(x => console.log(x));  // 1 2 3
-arr.map(x => x * 2);  // [2, 4, 6]
-arr.filter(x => x > 1); // [2, 3]
-arr.reduce((a, b) => a + b, 0); // 6
-arr.some(x => x > 2); // true
-arr.every(x => x > 0); // true
+arr.sort();        // [1, 2, 3] (string sort by default)
+arr.reverse();     // [3, 2, 1]
+arr.sort((a,b) => b - a); // [3, 2, 1] numeric sort
