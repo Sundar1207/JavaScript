@@ -1,15 +1,20 @@
-console.log(Math.PI);        // 3.141592653589793
-console.log(Math.sqrt(16));  // 4
-console.log(Math.pow(2, 3)); // 8
-console.log(Math.abs(-7));   // 7
-console.log(Math.round(4.6)); // 5
-console.log(Math.ceil(4.2));  // 5
-console.log(Math.floor(4.9)); // 4
-console.log(Math.min(1,5,3)); // 1
-console.log(Math.max(1,5,3)); // 5
+// Current date & time
+let now = new Date();
+console.log(now);   // e.g., 2025-09-17T07:20:30.123Z
 
-// Random number between 0 and 1
-console.log(Math.random());
+// Specific date
+let d1 = new Date("2025-09-17");
+console.log(d1);   // Wed Sep 17 2025 ...
 
-// Random number between 1 and 10
-console.log(Math.floor(Math.random() * 10) + 1);
+// Year, Month, Date, etc.
+console.log(now.getFullYear());  // 2025
+console.log(now.getMonth());     // 0-11 (0=Jan, 8=Sep)
+console.log(now.getDate());      // 17
+console.log(now.getDay());       // 0-6 (0=Sunday)
+console.log(now.getHours());     // 0-23
+console.log(now.getMinutes());   // 0-59
+console.log(now.getSeconds());   // 0-59
+
+// Set date values
+now.setFullYear(2030);
+console.log(now.getFullYear());  // 2030
