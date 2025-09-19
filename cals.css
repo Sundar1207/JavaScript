@@ -1,0 +1,51 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.Calculator{
+    height: 70vh;
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    border: 1px solid rgb(176, 175, 175);
+    top: 100px;
+    display: grid;
+    gap: 5px;
+    padding: 10PX;
+    border-radius: 2%;
+}   
+
+.Calculator>.from-group{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.Calculator>.from-group>button
+{
+    width: 25%;
+    border: none;
+    border-radius: 5%;
+    font-size: 20px;
+}
+.Calculator>.from-group>button:hover
+{
+    background-color: rgb(179, 178, 178);
+}
+.Calculator>.from-group>input{
+    width: 100%;
+    font-size: 40px;
+    border: 1px solid rgb(164, 163, 163);
+    outline: none;
+    padding-right: 10px;
+    text-align: end;
+}
+.Calculator>.from-group>.Evalvate.Evalvate{
+    color: white;
+    background: #2c25f1;
+    font-size: 30px;
+}
+.Calculator>.from-group>.Evalvate:hover{
+    background: #2c25f1d1;
+}

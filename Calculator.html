@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./cals.css">
+</head>
+<body style="background-color: black;">
+  <form class="Calculator">
+
+        <!-- Input -->
+        <div  class="from-group" >
+            <input type="text">
+        </div>
+        <div class="from-group">
+            <button type="button" onclick="addval('%')">%</button>
+            <button type="button" onclick="Clearval()">C</button>
+            <button type="button" onclick="Deleteval()">DEL</button>
+            <button type="button" onclick="addval('/')">/</button>
+        </div>
+        <div class="from-group">
+            <button type="button" onclick="addval('1')">1</button>
+            <button type="button" onclick="addval('2')">2</button>
+            <button type="button" onclick="addval('3')">3</button>
+            <button type="button" onclick="addval('+')">+</button>
+        </div>
+        <div class="from-group">
+            <button type="button" onclick="addval('4')">4</button>
+            <button type="button" onclick="addval('5')">5</button>
+            <button type="button" onclick="addval('6')">6</button>
+            <button type="button" onclick="addval('-')">-</button>
+        </div>
+        <div class="from-group">
+            <button type="button" onclick="addval('7')">7</button>
+            <button type="button" onclick="addval('8')">8</button>
+            <button type="button" onclick="addval('9')">9</button>
+            <button type="button" onclick="addval('*')">*</button>
+        </div>
+        <div class="from-group">
+            <button type="button" onclick="addval('00')">00</button>
+            <button type="button" onclick="addval('0')">0</button>
+            <button type="button" onclick="addval('0')">.</button>
+            <button type="button" onclick="Evalvate()" class="Evalvate">=</button>
+        </div>
+    </form>
+
+    <!-- Js Mode -->
+
+    <script src="./cals.js">
+
+    </script>
+</body>
+</html>
