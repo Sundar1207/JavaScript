@@ -1,20 +1,93 @@
-// Current date & time
-let now = new Date();
-console.log(now);   // e.g., 2025-09-17T07:20:30.123Z
 
-// Specific date
-let d1 = new Date("2025-09-17");
-console.log(d1);   // Wed Sep 17 2025 ...
+document.getElementById("Form-Validate").addEventListener('submit' , function(event)
+{
+    event.preventDefault();
+    let Uname=document.getElementById("Uname").value.trim()
+    let uemail=document.getElementById("Uemail").value.trim()
+    let password=document.getElementById("Upassword").value.trim()
+    let confrimPassword=document.getElementById("Password").value.trim()
+    
+    let Nameerror = document.getElementById("UN") 
+    let emailerror = document.getElementById("UE")
+    let password_error = document.getElementById("UP")
+    let confrimPassword_error = document.getElementById("UCP")
 
-// Year, Month, Date, etc.
-console.log(now.getFullYear());  // 2025
-console.log(now.getMonth());     // 0-11 (0=Jan, 8=Sep)
-console.log(now.getDate());      // 17
-console.log(now.getDay());       // 0-6 (0=Sunday)
-console.log(now.getHours());     // 0-23
-console.log(now.getMinutes());   // 0-59
-console.log(now.getSeconds());   // 0-59
+    let namepertern=/^[A-Za-z]+ [A-Za-z]$/
+    let emailpertern=/^[a-z0-7]+@[a-z]{4,}\.[a-z]{2,}$/
 
-// Set date values
-now.setFullYear(2030);
-console.log(now.getFullYear());  // 2030
+    let valid=true
+
+    if(Uname === "")
+    {
+        Nameerror.innerText="Enter The Value "
+    }
+    else if (!namepertern.test(Uname))
+    {
+            
+        Nameerror.innerText="Enter the Full Name "
+        valid=false
+    }
+    else if(namepertern.test(Uname))
+    {
+        Nameerror.innerText=""
+        valid=true
+    }
+
+
+    if(uemail=== "")
+    {
+        emailerror.innerText="Enter The Value "
+    }
+    else if (!emailpertern.test(uemail))
+    {
+        emailerror.innerText="Enter Valid mail"
+        valid=false
+    }
+    else if (emailpertern.test(uemail))
+    {
+        emailerror.innerText=""
+        valid=true
+    }
+
+
+    if(password === "")
+    {
+        password_error.innerText="Enter The Value "
+    }
+    else if(password.length<3 || password_error.length>10)
+    {
+        password_error.innerText="Enter password 3 to 10 "
+        valid=false
+    }
+     else if(password.length>3 || password_error.length<10)
+    {
+        password_error.innerText=""
+        valid=true
+    }
+
+
+    if(confrimPassword === "")
+    {
+        confrimPassword_error.innerText="Enter The Value "
+        valid=false
+    }
+
+    else if (confrimPassword !==password)
+    {
+        confrimPassword_error.innerText="*Not Match " 
+        valid=false 
+    }
+     else if (confrimPassword===password)
+    {
+        confrimPassword_error.innerText="" 
+        valid=true
+    }
+
+    if(valid)
+    {
+        alert(`Hii, ${Uname} succsess full open your acounds`)
+    }
+})
+
+
+

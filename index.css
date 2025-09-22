@@ -1,0 +1,75 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 100px;
+}
+
+h1
+{
+    text-align: center;
+    color: rgba(55, 55, 208, 0.966);
+    padding: 20px;
+}
+#Form-Validate
+{
+    border: 1px solid rgb(124, 120, 120);
+    width: 30vw;
+    min-width: 300px;
+    height: 60vh;
+    box-shadow: 0 0 5px rgb(127, 127, 127);
+    border-radius: 5%;
+    margin:auto;
+    padding: 20px;
+    display: grid;
+}
+#Form-Validate .form-group
+{
+    display: flex;  
+    flex-direction: column;
+
+}
+
+
+
+#Form-Validate .form-group label
+{
+    color: rgba(55, 55, 208, 0.966);
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#Form-Validate .form-group input 
+{
+    height: 30px;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+#Form-Validate .form-group span 
+{
+    color: red;
+}
+
+#Form-Validate button
+{
+    height: 35px;
+    background-color: rgba(55, 55, 208, 0.966);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 200;
+    font-size: 22px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#Form-Validate .form-group span
+{
+    color: red;
+    margin: 2px;
+}
