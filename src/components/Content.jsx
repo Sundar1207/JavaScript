@@ -16,21 +16,46 @@ let NewButton = styled(Button)`
 
 function Content() {
   let [counts, setCount] = useState(0);
+  let [data, setData] = useState("Loading"); // fix typo
 
-  // use curent state is counts
   function Increment() {
     setCount(counts + 1);
   }
-  // annenames Function
-  function Decrement() {
-    setCount((prevcount) => prevcount - 1);
-  }
+
+  let discomp = () => {
+    switch (data) {
+      case "Loading":
+        return <Lodingcomp />;
+      case "Success":
+        return <Successcomp />;
+      case "Error":
+        return <Errorcomp />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <main>
       <h1>Counter App - {counts}</h1>
       <Button onClick={Increment}>Increment</Button>
-      <NewButton onClick={Decrement}>Decrement</NewButton>
+
+      {/* Conditional reward message */}
+      {counts > 10 && <p>Ya you get the 10% Rewards</p>}
+
+      {/* Render dynamic component */}
+      {discomp()}
     </main>
   );
 }
 export default Content;
+
+function Lodingcomp() {
+  return <p>Loading...</p>;
+}
+function Successcomp() {
+  return <p>If Find It...</p>;
+}
+function Errorcomp() {
+  return <p>Error...</p>;
+}
